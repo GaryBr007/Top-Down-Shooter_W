@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bwhdol6twel7t"]
+
+[ext_resource type="Script" uid="uid://dtjx6l51y2uds" path="res://cenas/Entidades/player.gd" id="1_kg20n"]
+[ext_resource type="Texture2D" uid="uid://c400f7yq0y2nt" path="res://assets/Skins.png" id="2_kg20n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rx1bj"]
+radius = 60.00833
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86u1s"]
+load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rx1bj"]
+load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1irsg"]
+load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h20lb"]
+load_path = "res://.godot/imported/Weapons.png-b1ac7d339834adc4473df7fb4d8cb091.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8mrja"]
+load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
+
+[node name="Player" type="CharacterBody2D" unique_id=344916540]
+script = ExtResource("1_kg20n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579464833]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_rx1bj")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1372021104]
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
+[node name="Personagem" type="Node2D" parent="." unique_id=227377189]
+rotation = -1.5707964
+
+[node name="Corpo" type="Sprite2D" parent="Personagem" unique_id=1361999845]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_kg20n")
+region_enabled = true
+region_rect = Rect2(968.92053, 1372.743, 198.79211, 104.51343)
+
+[node name="Mochila" type="Sprite2D" parent="Personagem" unique_id=1837172867]
+position = Vector2(0, -56)
+scale = Vector2(0.6399999, 0.7)
+texture = SubResource("CompressedTexture2D_86u1s")
+region_enabled = true
+region_rect = Rect2(969, 1219, 198, 132)
+
+[node name="Braço1" type="Sprite2D" parent="Personagem" unique_id=542067946]
+position = Vector2(-47, 30.999998)
+rotation = 0.10584571
+scale = Vector2(0.7482282, 0.6433953)
+texture = SubResource("CompressedTexture2D_rx1bj")
+region_enabled = true
+region_rect = Rect2(1419, 1229, 103, 198)
+
+[node name="Braço2" type="Sprite2D" parent="Personagem" unique_id=1729731383]
+position = Vector2(16.187725, 56.40727)
+rotation = 0.10576823
+scale = Vector2(0.74416876, 0.7122681)
+texture = SubResource("CompressedTexture2D_1irsg")
+region_enabled = true
+region_rect = Rect2(1597.8768, 1211.8416, 133.87146, 243.35608)
+
+[node name="Arma" type="Sprite2D" parent="Personagem" unique_id=1999379942]
+modulate = Color(0.4725, 0.4725, 0.4725, 1)
+position = Vector2(-25, 94.99999)
+rotation = -0.037074275
+scale = Vector2(0.45714277, 0.53562707)
+texture = SubResource("CompressedTexture2D_h20lb")
+region_enabled = true
+region_rect = Rect2(1113, 459, 68, 336)
+
+[node name="Cabeça" type="Sprite2D" parent="Personagem" unique_id=231228895]
+position = Vector2(9.693523e-27, 3.85186e-34)
+scale = Vector2(0.5818182, 0.5896341)
+texture = SubResource("CompressedTexture2D_8mrja")
+region_enabled = true
+region_rect = Rect2(1186, 1203, 164, 164)
