@@ -6,6 +6,9 @@ const JUMP_VELOCITY = -400.0
 var direction = Vector2(0,0)
 #movimento do jogador
 
+@export var projetil: PackedScene
+@onready var ponta_arma = $EmissorBala
+
 func _physics_process(delta: float) -> void:
 	
 	rotacionar_corpo()
@@ -13,6 +16,15 @@ func _physics_process(delta: float) -> void:
 	mover()
 	
 	move_and_slide()
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("atirar"):
+		disparar()
+		
+func disparar():
+	var nova_bala = projetil.instantiate()
+	nova_bala.global_position = ponta_arma.global_position
+	get_tree().current_scene.add_child(nova_bala)
 
 func mover():
 	

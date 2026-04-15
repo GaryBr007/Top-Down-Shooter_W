@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bwhdol6twel7t"]
 
-[ext_resource type="Script" uid="uid://dtjx6l51y2uds" path="res://cenas/Entidades/player.gd" id="1_kg20n"]
-[ext_resource type="Texture2D" uid="uid://c400f7yq0y2nt" path="res://assets/Skins.png" id="2_kg20n"]
+[ext_resource type="Script" uid="uid://dtjx6l51y2uds" path="res://Scripts/outros/player.gd" id="1_kg20n"]
+[ext_resource type="PackedScene" uid="uid://ck55oa74rchm8" path="res://Cenas/Entidades/bala.tscn" id="2_b1hy4"]
+[ext_resource type="Texture2D" uid="uid://c400f7yq0y2nt" path="res://assets/sprites/Skins.png" id="2_kg20n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rx1bj"]
 radius = 60.00833
@@ -23,6 +24,7 @@ load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ct
 
 [node name="Player" type="CharacterBody2D" unique_id=344916540]
 script = ExtResource("1_kg20n")
+projetil = ExtResource("2_b1hy4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579464833]
 scale = Vector2(0.7, 0.7)
@@ -50,8 +52,8 @@ region_enabled = true
 region_rect = Rect2(969, 1219, 198, 132)
 
 [node name="Braço1" type="Sprite2D" parent="Personagem" unique_id=542067946]
-position = Vector2(-47, 30.999998)
-rotation = 0.10584571
+position = Vector2(-46, 33.999996)
+rotation = 0.033328034
 scale = Vector2(0.7482282, 0.6433953)
 texture = SubResource("CompressedTexture2D_rx1bj")
 region_enabled = true
@@ -67,8 +69,8 @@ region_rect = Rect2(1597.8768, 1211.8416, 133.87146, 243.35608)
 
 [node name="Arma" type="Sprite2D" parent="Personagem" unique_id=1999379942]
 modulate = Color(0.4725, 0.4725, 0.4725, 1)
-position = Vector2(-25, 94.99999)
-rotation = -0.037074275
+position = Vector2(-21.000002, 102.00001)
+rotation = -0.018457556
 scale = Vector2(0.45714277, 0.53562707)
 texture = SubResource("CompressedTexture2D_h20lb")
 region_enabled = true
@@ -80,3 +82,6 @@ scale = Vector2(0.5818182, 0.5896341)
 texture = SubResource("CompressedTexture2D_8mrja")
 region_enabled = true
 region_rect = Rect2(1186, 1203, 164, 164)
+
+[node name="EmissorBala" type="Marker2D" parent="." unique_id=1698092315]
+position = Vector2(190, 5)
