@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2yrmxcb5kdnd"]
 
 [ext_resource type="PackedScene" uid="uid://bwhdol6twel7t" path="res://cenas/Entidades/Player.tscn" id="1_romol"]
+[ext_resource type="PackedScene" uid="uid://c45yeutyyhtkf" path="res://cenas/Entidades/inimigo.tscn" id="1_ucm7t"]
 
 [node name="Node2D" type="Node2D" unique_id=1710922884]
 
@@ -10,3 +11,7 @@ offset_bottom = 648.0
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
 [node name="Player" parent="." unique_id=344916540 instance=ExtResource("1_romol")]
+unique_name_in_owner = true
+position = Vector2(806, -182)
+
+[node name="Inimigo" parent="." unique_id=365908998 instance=ExtResource("1_ucm7t")]

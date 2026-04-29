@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ck55oa74rchm8"]
 
-[ext_resource type="Script" uid="uid://bvyyoxfw4tti8" path="res://Scripts/outros/bala.gd" id="1_qbadt"]
+[ext_resource type="Script" uid="uid://bvyyoxfw4tti8" path="res://scripts/outros/bala.gd" id="1_qbadt"]
 [ext_resource type="Texture2D" uid="uid://8v8adl5ioxi1" path="res://assets/sprites/Fiery_Bullet_Tracer_PNG___Glowing_Gunshot_Effect_Overlay-PNGLove.com.png" id="2_pwynq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ag3k0"]
@@ -16,5 +16,5 @@ shape = SubResource("CircleShape2D_ag3k0")
 modulate = Color(1, 1, 1, 0.7921569)
 self_modulate = Color(1, 1, 1, 0.9372549)
 position = Vector2(-39.999996, 0)
-scale = Vector2(0.127, 0.08)
+scale = Vector2(0.20497368, 0.05039726)
 texture = ExtResource("2_pwynq")

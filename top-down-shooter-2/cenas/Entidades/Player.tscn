@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bwhdol6twel7t"]
 
-[ext_resource type="Script" uid="uid://dtjx6l51y2uds" path="res://Scripts/outros/player.gd" id="1_kg20n"]
-[ext_resource type="PackedScene" uid="uid://ck55oa74rchm8" path="res://Cenas/Entidades/bala.tscn" id="2_b1hy4"]
+[ext_resource type="Script" uid="uid://dtjx6l51y2uds" path="res://scripts/outros/player.gd" id="1_kg20n"]
+[ext_resource type="PackedScene" uid="uid://ck55oa74rchm8" path="res://cenas/Entidades/bala.tscn" id="2_b1hy4"]
 [ext_resource type="Texture2D" uid="uid://c400f7yq0y2nt" path="res://assets/sprites/Skins.png" id="2_kg20n"]
+[ext_resource type="AudioStream" uid="uid://bnu7moilb3gd4" path="res://assets/sons/TiroAk.mp3" id="4_rx1bj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rx1bj"]
 radius = 60.00833
@@ -52,7 +53,7 @@ region_enabled = true
 region_rect = Rect2(969, 1219, 198, 132)
 
 [node name="Braço1" type="Sprite2D" parent="Personagem" unique_id=542067946]
-position = Vector2(-46, 33.999996)
+position = Vector2(-39.999996, 34)
 rotation = 0.033328034
 scale = Vector2(0.7482282, 0.6433953)
 texture = SubResource("CompressedTexture2D_rx1bj")
@@ -60,7 +61,7 @@ region_enabled = true
 region_rect = Rect2(1419, 1229, 103, 198)
 
 [node name="Braço2" type="Sprite2D" parent="Personagem" unique_id=1729731383]
-position = Vector2(16.187725, 56.40727)
+position = Vector2(19.999998, 50)
 rotation = 0.10576823
 scale = Vector2(0.74416876, 0.7122681)
 texture = SubResource("CompressedTexture2D_1irsg")
@@ -69,8 +70,8 @@ region_rect = Rect2(1597.8768, 1211.8416, 133.87146, 243.35608)
 
 [node name="Arma" type="Sprite2D" parent="Personagem" unique_id=1999379942]
 modulate = Color(0.4725, 0.4725, 0.4725, 1)
-position = Vector2(-21.000002, 102.00001)
-rotation = -0.018457556
+position = Vector2(-14.000007, 99)
+rotation = -0.019280598
 scale = Vector2(0.45714277, 0.53562707)
 texture = SubResource("CompressedTexture2D_h20lb")
 region_enabled = true
@@ -85,3 +86,7 @@ region_rect = Rect2(1186, 1203, 164, 164)
 
 [node name="EmissorBala" type="Marker2D" parent="." unique_id=1698092315]
 position = Vector2(190, 5)
+
+[node name="SomTiro" type="AudioStreamPlayer2D" parent="." unique_id=699526235]
+stream = ExtResource("4_rx1bj")
+max_polyphony = 3
