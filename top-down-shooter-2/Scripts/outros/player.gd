@@ -35,3 +35,4 @@ func mover():
 	
 func rotacionar_corpo():
 	look_at(get_global_mouse_position())
+	

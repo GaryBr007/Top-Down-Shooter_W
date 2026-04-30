@@ -17,3 +17,9 @@ func mover():
 	
 func rotacionar_corpo():
 	look_at(%Player.global_position)
+	
+func tomar_dano():
+	visible = false
+	$SomMorte.play()
+	await $SomMorte.finished
+	self.queue_free()

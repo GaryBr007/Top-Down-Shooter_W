@@ -15,6 +15,8 @@ shape = SubResource("CircleShape2D_ag3k0")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=149686415]
 modulate = Color(1, 1, 1, 0.7921569)
 self_modulate = Color(1, 1, 1, 0.9372549)
-position = Vector2(-39.999996, 0)
+position = Vector2(-101, 0)
 scale = Vector2(0.20497368, 0.05039726)
 texture = ExtResource("2_pwynq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

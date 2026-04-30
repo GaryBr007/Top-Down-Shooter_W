@@ -3,9 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c400f7yq0y2nt" path="res://assets/sprites/Skins.png" id="1_05sdg"]
 [ext_resource type="Script" uid="uid://cdr86j62cksxm" path="res://cenas/Entidades/inimigo.gd" id="1_fv1lo"]
 [ext_resource type="AudioStream" uid="uid://bnu7moilb3gd4" path="res://assets/sons/TiroAk.mp3" id="2_fv1lo"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_vd8ii"]
-radius = 60.00833
+[ext_resource type="AudioStream" uid="uid://dab11jpg7m6c5" path="res://assets/sons/morte.mp3" id="4_vd8ii"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o5f61"]
 load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
@@ -22,12 +20,11 @@ load_path = "res://.godot/imported/Weapons.png-b1ac7d339834adc4473df7fb4d8cb091.
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kicjc"]
 load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
 
-[node name="Inimigo" type="CharacterBody2D" unique_id=365908998]
-script = ExtResource("1_fv1lo")
+[sub_resource type="CircleShape2D" id="CircleShape2D_vd8ii"]
+radius = 25.682728
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97793205]
-scale = Vector2(0.7, 0.7)
-shape = SubResource("CircleShape2D_vd8ii")
+[node name="Inimigo" type="CharacterBody2D" unique_id=365908998 groups=["Inimigos"]]
+script = ExtResource("1_fv1lo")
 
 [node name="Personagem" type="Node2D" parent="." unique_id=867704517]
 rotation = -1.5707964
@@ -77,9 +74,18 @@ texture = SubResource("CompressedTexture2D_kicjc")
 region_enabled = true
 region_rect = Rect2(270, 487, 164, 164)
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97793205]
+scale = Vector2(3.9332278, 2.5069835)
+shape = SubResource("CircleShape2D_vd8ii")
+
 [node name="EmissorBala" type="Marker2D" parent="." unique_id=1229253329]
 position = Vector2(190, 5)
 
 [node name="SomTiro" type="AudioStreamPlayer2D" parent="." unique_id=1218171340]
 stream = ExtResource("2_fv1lo")
+max_polyphony = 3
+
+[node name="SomMorte" type="AudioStreamPlayer2D" parent="." unique_id=1170894376]
+stream = ExtResource("4_vd8ii")
+volume_db = -6.804
 max_polyphony = 3
