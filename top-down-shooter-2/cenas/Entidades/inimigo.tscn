@@ -21,7 +21,10 @@ load_path = "res://.godot/imported/Weapons.png-b1ac7d339834adc4473df7fb4d8cb091.
 load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vd8ii"]
-radius = 25.682728
+radius = 64.629715
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o5f61"]
+radius = 64.0
 
 [node name="Inimigo" type="CharacterBody2D" unique_id=365908998 groups=["Inimigos"]]
 script = ExtResource("1_fv1lo")
@@ -75,8 +78,9 @@ region_enabled = true
 region_rect = Rect2(270, 487, 164, 164)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97793205]
-scale = Vector2(3.9332278, 2.5069835)
+position = Vector2(24.000002, 1)
 shape = SubResource("CircleShape2D_vd8ii")
+debug_color = Color(0.68338275, 0.30196577, 0.9914823, 0.41960785)
 
 [node name="EmissorBala" type="Marker2D" parent="." unique_id=1229253329]
 position = Vector2(190, 5)
@@ -89,3 +93,12 @@ max_polyphony = 3
 stream = ExtResource("4_vd8ii")
 volume_db = -6.804
 max_polyphony = 3
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1352721342]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=704977236]
+position = Vector2(24, -3.7252903e-09)
+rotation = -1.5687753
+shape = SubResource("CircleShape2D_o5f61")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

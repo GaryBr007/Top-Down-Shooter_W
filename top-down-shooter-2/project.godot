@@ -17,11 +17,13 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [global_group]
 
 Inimigos=""
+Player=""
 
 [input]
 

@@ -3,11 +3,12 @@ extends CharacterBody2D
 
 const SPEED = 500.0
 var direction = Vector2(0,0)
+var hp = 100
 
 @export var projetil: PackedScene
 @onready var ponta_arma = $EmissorBala
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	rotacionar_corpo()
 	
@@ -36,3 +37,9 @@ func mover():
 func rotacionar_corpo():
 	look_at(get_global_mouse_position())
 	
+func tomar_dano_p():
+	hp -= 20
+	
+func morrer():
+	if hp <= 0:
+		get_tree().change_scene_to_file("res://tela_morte.tscn")

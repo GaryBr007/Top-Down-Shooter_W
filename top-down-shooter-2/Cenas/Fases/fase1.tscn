@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://b2yrmxcb5kdnd"]
 
 [ext_resource type="PackedScene" uid="uid://bwhdol6twel7t" path="res://cenas/Entidades/Player.tscn" id="1_romol"]
-[ext_resource type="PackedScene" uid="uid://c45yeutyyhtkf" path="res://cenas/Entidades/inimigo.tscn" id="1_ucm7t"]
+[ext_resource type="Script" uid="uid://c4ekp1i54n7nb" path="res://cenas/Fases/fase_1.gd" id="1_ucm7t"]
+[ext_resource type="PackedScene" uid="uid://c45yeutyyhtkf" path="res://cenas/Entidades/inimigo.tscn" id="2_vbi5i"]
 
 [node name="Node2D" type="Node2D" unique_id=1710922884]
+script = ExtResource("1_ucm7t")
+inimigo_cena = ExtResource("2_vbi5i")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=893347575]
 offset_right = 1152.0
@@ -14,4 +17,7 @@ color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 unique_name_in_owner = true
 position = Vector2(806, -182)
 
-[node name="Inimigo" parent="." unique_id=365908998 instance=ExtResource("1_ucm7t")]
+[node name="Timer" type="Timer" parent="." unique_id=60640448]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

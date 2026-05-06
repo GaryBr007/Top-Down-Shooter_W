@@ -5,9 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://c400f7yq0y2nt" path="res://assets/sprites/Skins.png" id="2_kg20n"]
 [ext_resource type="AudioStream" uid="uid://bnu7moilb3gd4" path="res://assets/sons/TiroAk.mp3" id="4_rx1bj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rx1bj"]
-radius = 60.00833
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86u1s"]
 load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
 
@@ -23,13 +20,12 @@ load_path = "res://.godot/imported/Weapons.png-b1ac7d339834adc4473df7fb4d8cb091.
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8mrja"]
 load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
 
-[node name="Player" type="CharacterBody2D" unique_id=344916540]
+[sub_resource type="CircleShape2D" id="CircleShape2D_rx1bj"]
+radius = 97.18486
+
+[node name="Player" type="CharacterBody2D" unique_id=344916540 groups=["Player"]]
 script = ExtResource("1_kg20n")
 projetil = ExtResource("2_b1hy4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579464833]
-scale = Vector2(0.7, 0.7)
-shape = SubResource("CircleShape2D_rx1bj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1372021104]
 zoom = Vector2(0.5, 0.5)
@@ -90,3 +86,8 @@ position = Vector2(190, 5)
 [node name="SomTiro" type="AudioStreamPlayer2D" parent="." unique_id=699526235]
 stream = ExtResource("4_rx1bj")
 max_polyphony = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579464833]
+position = Vector2(17, 0.99999994)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("CircleShape2D_rx1bj")
