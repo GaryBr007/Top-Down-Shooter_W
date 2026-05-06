@@ -49,8 +49,8 @@ region_enabled = true
 region_rect = Rect2(969, 1219, 198, 132)
 
 [node name="Braço1" type="Sprite2D" parent="Personagem" unique_id=542067946]
-position = Vector2(-39.999996, 34)
-rotation = 0.033328034
+position = Vector2(-34, 34)
+rotation = -0.03418892
 scale = Vector2(0.7482282, 0.6433953)
 texture = SubResource("CompressedTexture2D_rx1bj")
 region_enabled = true
@@ -58,7 +58,7 @@ region_rect = Rect2(1419, 1229, 103, 198)
 
 [node name="Braço2" type="Sprite2D" parent="Personagem" unique_id=1729731383]
 position = Vector2(19.999998, 50)
-rotation = 0.10576823
+rotation = -0.0152019635
 scale = Vector2(0.74416876, 0.7122681)
 texture = SubResource("CompressedTexture2D_1irsg")
 region_enabled = true
@@ -66,8 +66,8 @@ region_rect = Rect2(1597.8768, 1211.8416, 133.87146, 243.35608)
 
 [node name="Arma" type="Sprite2D" parent="Personagem" unique_id=1999379942]
 modulate = Color(0.4725, 0.4725, 0.4725, 1)
-position = Vector2(-14.000007, 99)
-rotation = -0.019280598
+position = Vector2(-8.000005, 100)
+rotation = -0.0029891632
 scale = Vector2(0.45714277, 0.53562707)
 texture = SubResource("CompressedTexture2D_h20lb")
 region_enabled = true
@@ -81,7 +81,7 @@ region_enabled = true
 region_rect = Rect2(1186, 1203, 164, 164)
 
 [node name="EmissorBala" type="Marker2D" parent="." unique_id=1698092315]
-position = Vector2(190, 5)
+position = Vector2(203, 8)
 
 [node name="SomTiro" type="AudioStreamPlayer2D" parent="." unique_id=699526235]
 stream = ExtResource("4_rx1bj")

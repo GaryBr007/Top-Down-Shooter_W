@@ -10,12 +10,13 @@ radius = 3.0
 script = ExtResource("1_qbadt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083933337]
+position = Vector2(35, 0)
 shape = SubResource("CircleShape2D_ag3k0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=149686415]
 modulate = Color(1, 1, 1, 0.7921569)
 self_modulate = Color(1, 1, 1, 0.9372549)
-position = Vector2(-101, 0)
+position = Vector2(-55, 0)
 scale = Vector2(0.20497368, 0.05039726)
 texture = ExtResource("2_pwynq")
 

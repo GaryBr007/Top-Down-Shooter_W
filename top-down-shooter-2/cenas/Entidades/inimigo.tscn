@@ -24,7 +24,7 @@ load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ct
 radius = 64.629715
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o5f61"]
-radius = 64.0
+radius = 72.0
 
 [node name="Inimigo" type="CharacterBody2D" unique_id=365908998 groups=["Inimigos"]]
 script = ExtResource("1_fv1lo")

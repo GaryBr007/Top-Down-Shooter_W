@@ -5,8 +5,8 @@ extends Node2D
 func spawn_inimigo():
 	var novo_inimigo = inimigo_cena.instantiate()
 	
-	var rand_posX =randi_range(-400,400)
-	var rand_posY =randi_range(-250,250)
+	var rand_posX =randi_range(-1000,1000)
+	var rand_posY =randi_range(-1000,1000)
 	var posX = %Player.global_position.x + rand_posX
 	var posY = %Player.global_position.y + rand_posY
 	
@@ -18,8 +18,8 @@ func spawn_inimigo():
 		if posX >= 0 and posX <= 10000:
 			break
 			
-		rand_posX =randi_range(-400,400)
-		rand_posY =randi_range(-250,250)
+		rand_posX =randi_range(-1000,1000)
+		rand_posY =randi_range(-1000,1000)
 		posX = %Player.global_position.x + rand_posX
 		posY = %Player.global_position.y + rand_posY
 			
