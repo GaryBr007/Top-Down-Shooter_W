@@ -33,15 +33,18 @@ position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
 [node name="Personagem" type="Node2D" parent="." unique_id=227377189]
+z_index = 1
 rotation = -1.5707964
 
 [node name="Corpo" type="Sprite2D" parent="Personagem" unique_id=1361999845]
+z_index = 1
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_kg20n")
 region_enabled = true
 region_rect = Rect2(968.92053, 1372.743, 198.79211, 104.51343)
 
 [node name="Mochila" type="Sprite2D" parent="Personagem" unique_id=1837172867]
+z_index = 1
 position = Vector2(0, -56)
 scale = Vector2(0.6399999, 0.7)
 texture = SubResource("CompressedTexture2D_86u1s")
@@ -49,6 +52,7 @@ region_enabled = true
 region_rect = Rect2(969, 1219, 198, 132)
 
 [node name="Braço1" type="Sprite2D" parent="Personagem" unique_id=542067946]
+z_index = 1
 position = Vector2(-34, 34)
 rotation = -0.03418892
 scale = Vector2(0.7482282, 0.6433953)
@@ -57,6 +61,7 @@ region_enabled = true
 region_rect = Rect2(1419, 1229, 103, 198)
 
 [node name="Braço2" type="Sprite2D" parent="Personagem" unique_id=1729731383]
+z_index = 1
 position = Vector2(19.999998, 50)
 rotation = -0.0152019635
 scale = Vector2(0.74416876, 0.7122681)
@@ -66,6 +71,7 @@ region_rect = Rect2(1597.8768, 1211.8416, 133.87146, 243.35608)
 
 [node name="Arma" type="Sprite2D" parent="Personagem" unique_id=1999379942]
 modulate = Color(0.4725, 0.4725, 0.4725, 1)
+z_index = 1
 position = Vector2(-8.000005, 100)
 rotation = -0.0029891632
 scale = Vector2(0.45714277, 0.53562707)
@@ -74,6 +80,7 @@ region_enabled = true
 region_rect = Rect2(1113, 459, 68, 336)
 
 [node name="Cabeça" type="Sprite2D" parent="Personagem" unique_id=231228895]
+z_index = 1
 position = Vector2(9.693523e-27, 3.85186e-34)
 scale = Vector2(0.5818182, 0.5896341)
 texture = SubResource("CompressedTexture2D_8mrja")
@@ -81,10 +88,11 @@ region_enabled = true
 region_rect = Rect2(1186, 1203, 164, 164)
 
 [node name="EmissorBala" type="Marker2D" parent="." unique_id=1698092315]
-position = Vector2(203, 8)
+position = Vector2(160, 8)
 
 [node name="SomTiro" type="AudioStreamPlayer2D" parent="." unique_id=699526235]
 stream = ExtResource("4_rx1bj")
+volume_db = -5.0
 max_polyphony = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579464833]

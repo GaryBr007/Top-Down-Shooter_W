@@ -27,6 +27,7 @@ func tomar_dano():
 	
 func morrer():
 	if hp <= 0:
+		Global.killcount += 1
 		$SomMorte.play()
 		visible = false
 		$CollisionShape2D.disabled = true
