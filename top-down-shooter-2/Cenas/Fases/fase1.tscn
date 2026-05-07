@@ -4,21 +4,54 @@
 [ext_resource type="Script" uid="uid://c4ekp1i54n7nb" path="res://cenas/Fases/fase_1.gd" id="1_ucm7t"]
 [ext_resource type="PackedScene" uid="uid://c45yeutyyhtkf" path="res://cenas/Entidades/inimigo.tscn" id="2_vbi5i"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbi5i"]
+size = Vector2(424, 3760)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkbpj"]
+size = Vector2(424, 3760)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o3fo"]
+size = Vector2(424, 6528)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wddx"]
+size = Vector2(424, 6528)
+
 [node name="Node2D" type="Node2D" unique_id=1710922884]
 script = ExtResource("1_ucm7t")
 inimigo_cena = ExtResource("2_vbi5i")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=893347575]
-offset_right = 3208.0
-offset_bottom = 1608.0
+offset_left = -2864.0
+offset_top = -1888.0
+offset_right = 2864.0
+offset_bottom = 1872.0
 color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 
 [node name="Player" parent="." unique_id=344916540 instance=ExtResource("1_romol")]
 unique_name_in_owner = true
-position = Vector2(806, -182)
 
 [node name="Timer" type="Timer" parent="." unique_id=60640448]
 wait_time = 1.25
 autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=423709836]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=570097926]
+position = Vector2(-3052, -8)
+shape = SubResource("RectangleShape2D_vbi5i")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=867107467]
+position = Vector2(3052, -8)
+shape = SubResource("RectangleShape2D_wkbpj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1631768910]
+position = Vector2(0, 2060)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_7o3fo")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2041705045]
+position = Vector2(1.7484555e-07, -2076)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_4wddx")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ck55oa74rchm8" path="res://cenas/Entidades/bala.tscn" id="2_b1hy4"]
 [ext_resource type="Texture2D" uid="uid://c400f7yq0y2nt" path="res://assets/sprites/Skins.png" id="2_kg20n"]
 [ext_resource type="AudioStream" uid="uid://bnu7moilb3gd4" path="res://assets/sons/TiroAk.mp3" id="4_rx1bj"]
+[ext_resource type="PackedScene" uid="uid://doekccyraj6l7" path="res://cenas/Menu/hud.tscn" id="5_1irsg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86u1s"]
 load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
@@ -92,10 +93,14 @@ position = Vector2(160, 8)
 
 [node name="SomTiro" type="AudioStreamPlayer2D" parent="." unique_id=699526235]
 stream = ExtResource("4_rx1bj")
-volume_db = -5.0
+volume_db = -10.0
 max_polyphony = 3
+
+[node name="Node" type="Node" parent="SomTiro" unique_id=265834718]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579464833]
 position = Vector2(17, 0.99999994)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("CircleShape2D_rx1bj")
+
+[node name="CanvasLayer" parent="." unique_id=2120237855 instance=ExtResource("5_1irsg")]

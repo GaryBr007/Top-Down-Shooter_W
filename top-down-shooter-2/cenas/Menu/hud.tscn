@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://doekccyraj6l7"]
+
+[ext_resource type="Script" uid="uid://dhifwm6frston" path="res://scripts/outros/hud.gd" id="1_x1ga1"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2120237855]
+script = ExtResource("1_x1ga1")
+
+[node name="Kills" type="Label" parent="." unique_id=2000756595]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 28
+text = "Kills: "
+
+[node name="Tempo" type="Label" parent="." unique_id=916749711]
+offset_top = 32.0
+offset_right = 80.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 20
+text = "01:36.00"
