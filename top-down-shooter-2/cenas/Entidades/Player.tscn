@@ -31,7 +31,7 @@ projetil = ExtResource("2_b1hy4")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1372021104]
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
-position_smoothing_speed = 20.0
+position_smoothing_speed = 17.0
 
 [node name="Personagem" type="Node2D" parent="." unique_id=227377189]
 z_index = 1
@@ -42,7 +42,7 @@ z_index = 1
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_kg20n")
 region_enabled = true
-region_rect = Rect2(968.92053, 1372.743, 198.79211, 104.51343)
+region_rect = Rect2(973, 1005, 197, 105)
 
 [node name="Mochila" type="Sprite2D" parent="Personagem" unique_id=1837172867]
 z_index = 1
@@ -50,7 +50,7 @@ position = Vector2(0, -56)
 scale = Vector2(0.6399999, 0.7)
 texture = SubResource("CompressedTexture2D_86u1s")
 region_enabled = true
-region_rect = Rect2(969, 1219, 198, 132)
+region_rect = Rect2(971, 850, 197, 132)
 
 [node name="Braço1" type="Sprite2D" parent="Personagem" unique_id=542067946]
 z_index = 1
@@ -59,7 +59,7 @@ rotation = -0.03418892
 scale = Vector2(0.7482282, 0.6433953)
 texture = SubResource("CompressedTexture2D_rx1bj")
 region_enabled = true
-region_rect = Rect2(1419, 1229, 103, 198)
+region_rect = Rect2(1421, 860, 103, 199)
 
 [node name="Braço2" type="Sprite2D" parent="Personagem" unique_id=1729731383]
 z_index = 1
@@ -68,7 +68,7 @@ rotation = -0.0152019635
 scale = Vector2(0.74416876, 0.7122681)
 texture = SubResource("CompressedTexture2D_1irsg")
 region_enabled = true
-region_rect = Rect2(1597.8768, 1211.8416, 133.87146, 243.35608)
+region_rect = Rect2(1601, 843, 132, 243)
 
 [node name="Arma" type="Sprite2D" parent="Personagem" unique_id=1999379942]
 modulate = Color(0.4725, 0.4725, 0.4725, 1)
@@ -86,7 +86,7 @@ position = Vector2(9.693523e-27, 3.85186e-34)
 scale = Vector2(0.5818182, 0.5896341)
 texture = SubResource("CompressedTexture2D_8mrja")
 region_enabled = true
-region_rect = Rect2(1186, 1203, 164, 164)
+region_rect = Rect2(1187, 834, 165, 165)
 
 [node name="EmissorBala" type="Marker2D" parent="." unique_id=1698092315]
 position = Vector2(160, 8)

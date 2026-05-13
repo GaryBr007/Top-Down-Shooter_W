@@ -2,21 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c400f7yq0y2nt" path="res://assets/sprites/Skins.png" id="1_05sdg"]
 [ext_resource type="Script" uid="uid://cdr86j62cksxm" path="res://cenas/Entidades/inimigo.gd" id="1_fv1lo"]
+[ext_resource type="Texture2D" uid="uid://d4liwcaifdg1y" path="res://assets/sprites/spritezumbi.png" id="3_vd8ii"]
 [ext_resource type="AudioStream" uid="uid://dab11jpg7m6c5" path="res://assets/sons/morte.mp3" id="4_vd8ii"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o5f61"]
-load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_60ue4"]
-load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2ud24"]
-load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4q7ti"]
-load_path = "res://.godot/imported/Weapons.png-b1ac7d339834adc4473df7fb4d8cb091.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kicjc"]
 load_path = "res://.godot/imported/Skins.png-8c65739c8c5104deacfdea88d4d88df8.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vd8ii"]
@@ -37,59 +26,46 @@ z_index = 1
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_05sdg")
 region_enabled = true
-region_rect = Rect2(53, 656, 198, 105)
+region_rect = Rect2(2971, 299, 197, 105)
 
 [node name="Mochila" type="Sprite2D" parent="Personagem" unique_id=296604662]
 z_index = 1
-position = Vector2(0, -56)
+position = Vector2(-0.9999981, -44)
 scale = Vector2(0.6399999, 0.7)
 texture = SubResource("CompressedTexture2D_o5f61")
 region_enabled = true
-region_rect = Rect2(53, 503, 198, 132)
+region_rect = Rect2(2971, 146, 197, 132)
 
 [node name="Braço1" type="Sprite2D" parent="Personagem" unique_id=1546113380]
 z_index = 1
-position = Vector2(-39.999996, 34)
-rotation = 0.033328034
-scale = Vector2(0.7482282, 0.6433953)
-texture = SubResource("CompressedTexture2D_60ue4")
+position = Vector2(-46.000004, 46.999996)
+rotation = -3.1713433
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("3_vd8ii")
 region_enabled = true
-region_rect = Rect2(503, 513, 103, 198)
+region_rect = Rect2(1645, 332, 209, 618)
 
 [node name="Braço2" type="Sprite2D" parent="Personagem" unique_id=999904761]
 z_index = 1
-position = Vector2(19.999998, 50)
-rotation = 0.10576823
-scale = Vector2(0.74416876, 0.7122681)
-texture = SubResource("CompressedTexture2D_2ud24")
+position = Vector2(45, 46)
+rotation = -3.1253645
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("3_vd8ii")
 region_enabled = true
-region_rect = Rect2(683, 496, 132, 242)
-
-[node name="Arma" type="Sprite2D" parent="Personagem" unique_id=328110479]
-modulate = Color(0.4725, 0.4725, 0.4725, 1)
-z_index = 1
-position = Vector2(-14.000007, 99)
-rotation = -0.019280598
-scale = Vector2(0.45714277, 0.53562707)
-texture = SubResource("CompressedTexture2D_4q7ti")
-region_enabled = true
-region_rect = Rect2(1113, 459, 68, 336)
+region_rect = Rect2(146, 332, 209, 618)
 
 [node name="Cabeça" type="Sprite2D" parent="Personagem" unique_id=2078219090]
 z_index = 1
-position = Vector2(9.693523e-27, 3.85186e-34)
-scale = Vector2(0.5818182, 0.5896341)
-texture = SubResource("CompressedTexture2D_kicjc")
+position = Vector2(0, -9.1835e-41)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("3_vd8ii")
 region_enabled = true
-region_rect = Rect2(270, 487, 164, 164)
+region_rect = Rect2(819, 873, 434, 426)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97793205]
 position = Vector2(24.000002, 1)
 shape = SubResource("CircleShape2D_vd8ii")
 debug_color = Color(0.68338275, 0.30196577, 0.9914823, 0.41960785)
-
-[node name="EmissorBala" type="Marker2D" parent="." unique_id=1229253329]
-position = Vector2(190, 5)
 
 [node name="SomMorte" type="AudioStreamPlayer2D" parent="." unique_id=1170894376]
 stream = ExtResource("4_vd8ii")

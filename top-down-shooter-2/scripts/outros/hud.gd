@@ -14,6 +14,17 @@ func _physics_process(delta: float) -> void:
 func update_ui():
 	var t = int(Global.timer) % 60
 	var m = int(int(Global.timer) / 60)
-	var formatted_time = str(t) 
-	$Tempo.text = str(m) + ":" + str(t)
+	var _formatted_time = str(t) 
+	if t < 10:
+		if m < 10:
+			$Tempo.text = "0" + str(m) + ":" + "0" + str(t)
+		else:
+			$Tempo.text = str(m) + ":" + "0" + str(t)
+	elif t >= 10:
+		if m < 10:
+			$Tempo.text = "0" + str(m) + ":" + str(t)
+		else:
+			$Tempo.text = str(m) + ":" + str(t)
+	else:
+		$Tempo.text = str(m) + ":" + str(t)
 	

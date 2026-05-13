@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://doekccyraj6l7"]
 
 [ext_resource type="Script" uid="uid://dhifwm6frston" path="res://scripts/outros/hud.gd" id="1_x1ga1"]
+[ext_resource type="Texture2D" uid="uid://dqb87nuxnaph1" path="res://assets/sprites/Free Vignette Overlay 24.png" id="2_ggn4q"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=2120237855]
 script = ExtResource("1_x1ga1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=663438312]
+modulate = Color(0.56046253, 0.56046253, 0.56046253, 0.30588236)
+self_modulate = Color(0.8848981, 0.8848981, 0.8848981, 0.6431373)
+position = Vector2(576, 324)
+scale = Vector2(1.28, 1.08)
+texture = ExtResource("2_ggn4q")
 
 [node name="Kills" type="Label" parent="." unique_id=2000756595]
 offset_right = 40.0

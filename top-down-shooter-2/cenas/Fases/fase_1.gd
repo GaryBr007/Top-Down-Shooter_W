@@ -5,21 +5,19 @@ extends Node2D
 func spawn_inimigo():
 	var novo_inimigo = inimigo_cena.instantiate()
 	
-	var rand_posX =randi_range(-1000,1000)
-	var rand_posY =randi_range(-1000,1000)
+	var rand_posX =randi_range(-1300,1300)
+	var rand_posY =randi_range(-1300,1300)
 	var posX = %Player.global_position.x + rand_posX
 	var posY = %Player.global_position.y + rand_posY
 	
 	while true:
-		if %Player.global_position.distance_to(Vector2(posX,posY))>1000:
-			break
-		if posY >= 0 and posY <= 5000:
-			break
-		if posX >= 0 and posX <= 10000:
-			break
+		if %Player.global_position.distance_to(Vector2(posX,posY))>1300:
+			if posY >= -1848 and posY <= 1848:
+				if posX >= -2840 and posX <= 2840:
+					break
 			
-		rand_posX =randi_range(-1000,1000)
-		rand_posY =randi_range(-1000,1000)
+		rand_posX =randi_range(-1300,1300)
+		rand_posY =randi_range(-1300,1300)
 		posX = %Player.global_position.x + rand_posX
 		posY = %Player.global_position.y + rand_posY
 			
